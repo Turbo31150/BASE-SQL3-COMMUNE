@@ -1,0 +1,53 @@
+{
+  "version": "10.0.0",
+  "cluster_name": "TRADING_AI_CLUSTER",
+  "machines": [
+    {
+      "name": "MACHINE1-MASTER",
+      "ip": "192.168.1.85",
+      "role": "MASTER",
+      "db_path": "F:\\BUREAU\\carV1\\trading-cluster-manager\\DB\\SQL3_MASTER.db",
+      "services": ["MCP", "MASTER", "SYNC"]
+    },
+    {
+      "name": "MACHINE2-DETECTOR",
+      "ip": "192.168.1.26",
+      "role": "DETECTOR",
+      "db_path": "trading_v9.db",
+      "services": ["SCANNER", "DETECTOR"]
+    },
+    {
+      "name": "MACHINE3-VALIDATOR",
+      "ip": "192.168.1.113",
+      "role": "VALIDATOR",
+      "db_path": "C:\\CLAUDE_WORKSPACE\\trading-cluster-manager\\DB\\trading_v9.db",
+      "services": ["VALIDATOR", "AI", "TELEGRAM"]
+    }
+  ],
+  "sync": {
+    "interval_seconds": 120,
+    "master_ip": "192.168.1.85",
+    "sync_tables": ["trading_signals", "ai_validations", "tickers_cache"]
+  },
+  "mexc": {
+    "futures_api": "https://contract.mexc.com/api/v1",
+    "top_symbols": [
+      "BTC_USDT", "ETH_USDT", "SOL_USDT", "BNB_USDT", "XRP_USDT",
+      "DOGE_USDT", "ADA_USDT", "AVAX_USDT", "LINK_USDT", "DOT_USDT"
+    ]
+  },
+  "trading": {
+    "min_score": 55,
+    "call_score": 75,
+    "premium_score": 85,
+    "auto_score": 90,
+    "default_leverage": 12,
+    "tp_levels": [1.5, 3.0, 4.8, 7.0, 10.0, 14.0, 20.0, 30.0]
+  },
+  "ai": {
+    "quad_enabled": true,
+    "min_votes": 2,
+    "timeout_ms": 45000,
+    "providers": ["lmstudio", "gemini", "perplexity", "claude"]
+  }
+}

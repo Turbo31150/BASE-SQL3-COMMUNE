@@ -1,0 +1,30 @@
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.db.backup
+DB/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Secrets
+*.secret
+*.key
+credentials.json
