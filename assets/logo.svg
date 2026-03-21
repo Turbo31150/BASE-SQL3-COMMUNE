@@ -1,0 +1,39 @@
+<svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" font-family="'JetBrains Mono',monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#06080C"/><stop offset="100%" stop-color="#0C1018"/></linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#34D399"/><stop offset="100%" stop-color="#60A5FA"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="520" height="160" rx="14" fill="url(#bg)"/>
+  <rect width="520" height="160" rx="14" fill="none" stroke="#34D399" stroke-width="1" stroke-opacity="0.25"/>
+  <g transform="translate(22,24)" filter="url(#glow)">
+    <!-- Database cylinder -->
+    <ellipse cx="60" cy="22" rx="38" ry="10" fill="#06080C" stroke="#34D399" stroke-width="2"/>
+    <rect x="22" y="22" width="76" height="68" fill="#06080C" stroke="#34D399" stroke-width="2"/>
+    <ellipse cx="60" cy="90" rx="38" ry="10" fill="#06080C" stroke="#34D399" stroke-width="2"/>
+    <!-- Inner horizontal lines -->
+    <line x1="22" y1="44" x2="98" y2="44" stroke="#34D399" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="22" y1="66" x2="98" y2="66" stroke="#60A5FA" stroke-width="1" stroke-opacity="0.4"/>
+    <!-- SQL label -->
+    <text x="60" y="59" text-anchor="middle" fill="url(#g1)" font-size="13" font-weight="800" filter="url(#glow)">SQL3</text>
+    <!-- Multi-node indicator -->
+    <circle cx="16" cy="16" r="5" fill="#34D399" filter="url(#glow)"/>
+    <circle cx="104" cy="16" r="5" fill="#60A5FA" filter="url(#glow)"/>
+    <line x1="21" y1="16" x2="38" y2="18" stroke="#34D399" stroke-width="1" stroke-opacity="0.5"/>
+    <line x1="88" y1="18" x2="99" y2="16" stroke="#60A5FA" stroke-width="1" stroke-opacity="0.5"/>
+  </g>
+  <text x="156" y="54" fill="url(#g1)" font-size="26" font-weight="800" letter-spacing="-0.5" filter="url(#glow)">BASE·SQL3·HUB</text>
+  <text x="157" y="77" fill="#2A3A30" font-size="12.5" letter-spacing="0.5">Centralized SQLite3 — Multi-GPU Trading AI Cluster</text>
+  <rect x="156" y="87" width="340" height="1.5" rx="1" fill="url(#g1)" opacity="0.3"/>
+  <g transform="translate(156,101)">
+    <rect x="0"   y="0" width="62" height="22" rx="5" fill="#34D399" fill-opacity="0.1" stroke="#34D399" stroke-width="0.7" stroke-opacity="0.5"/>
+    <text x="31"  y="15" text-anchor="middle" fill="#34D399" font-size="10">Python</text>
+    <rect x="68"  y="0" width="66" height="22" rx="5" fill="#60A5FA" fill-opacity="0.1" stroke="#60A5FA" stroke-width="0.7" stroke-opacity="0.5"/>
+    <text x="101" y="15" text-anchor="middle" fill="#60A5FA" font-size="10">SQLite3</text>
+    <rect x="140" y="0" width="82" height="22" rx="5" fill="#34D399" fill-opacity="0.1" stroke="#34D399" stroke-width="0.7" stroke-opacity="0.5"/>
+    <text x="181" y="15" text-anchor="middle" fill="#34D399" font-size="10">3 machines</text>
+    <rect x="228" y="0" width="64" height="22" rx="5" fill="#60A5FA" fill-opacity="0.1" stroke="#60A5FA" stroke-width="0.7" stroke-opacity="0.5"/>
+    <text x="260" y="15" text-anchor="middle" fill="#60A5FA" font-size="10">MEXC</text>
+  </g>
+  <text x="156" y="149" fill="#2A3A30" font-size="10">Turbo31150  ·  MIT  ·  shared state  ·  M1/M2/M3 sync  ·  trading data hub</text>
+</svg>
